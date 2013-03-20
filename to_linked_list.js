@@ -4,9 +4,7 @@ var to_linked_list = function (list, list_i, parent_node, current_node) {
 	
 	if (!list_i) { list_i = 0}
 
-	if (list_i == list.length) {
-		return parent_node
-	}
+	if (list_i == list.length) { return parent_node }
 
 	var item = list[list_i]
 	var new_current_node
