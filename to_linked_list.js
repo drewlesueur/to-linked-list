@@ -22,5 +22,18 @@ var to_linked_list = function (list, list_i, parent_node, current_node) {
 	return to_linked_list(list, list_i + 1, parent_node, new_current_node)
 }
     
+    
+var to_linked_list_2 = function (list, index) {
+  index = index || 0
+  if (index >= list.length) {
+    return null;
+  }
+  var item = list[index]
+  if (is_array(item)) {
+    item = to_linked_list(item, 0)
+  }
+  return [item, to_linked_list(list, index + 1)]
+}
+
 
 
